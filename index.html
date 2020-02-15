@@ -7,16 +7,28 @@
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    <div id ="app" class="card" :class="bodyClass">
+    <div id ="app" class="card" :style="{background:newBg}" >
         
         <div class="img">
             <img :src="imgSrc">
         </div>
         
-        <div class="name">{{name}}</div>
+        <h1 v-if="showLife">人生</h1>
+        <h1 v-else-if="showSuper">好</h1>
+        <h1 v-else>難！！</h1>
+        
+        <!-- <div class="name">{{name}}</div>
         <div class="company">{{company}}</div>
-        <input type="text" v-model="bodyClass">
-        <footer class="end">{{end}}</footer>
+        <ul v-for="item in items">
+            <li>
+                {{item.text}}
+            </li>
+        </ul>
+        <input type="text" v-model="newCompany">
+        <button v-on:click="onSubmit">確認</button>
+        <input type="color" v-model="newBg">
+        <button v-on:click="onClean">清除</button>
+        <footer class="end">{{end}}</footer> -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="script.js"></script>
