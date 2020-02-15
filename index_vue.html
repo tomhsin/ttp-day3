@@ -7,19 +7,10 @@
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    <div id ="app" class="card" :class="bodyClass">
-        
-        <div class="img">
-            <img :src="imgSrc">
-        </div>
-        
-        <div class="name">{{name}}</div>
-        <div class="company">{{company}}</div>
-        <input type="text" v-model="bodyClass">
-        <footer class="end">{{end}}</footer>
+    <div id="app">
+        {{message}}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="script.js"></script>
-
 </body>
 </html>
